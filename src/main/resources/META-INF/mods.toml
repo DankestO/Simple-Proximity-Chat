@@ -1,0 +1,79 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "GPL-3.0-or-later"
+
+[[mods]]
+modId = "simpleproximitychat"
+version = "${mod_version}"
+displayName = "Simple Proximity Chat"
+logoFile = "logo.png"
+logoBlur = false
+authors = "Dankest0"
+# El mod funciona aunque un cliente no lo tenga (solo pierde los iconos del HUD).
+displayTest = "IGNORE_ALL_VERSION"
+description = '''
+Text chat addon for Simple Voice Chat and Simple Radio.
+
+- Proximity chat: messages only reach players within Simple Voice Chat's voice distance,
+  and words start getting lost near the edge. The chat event is never cancelled, so the server
+  console and other mods (e.g. Minecraft Comes Alive) still receive every message.
+- Walkie-talkies: holding a Simple Radio walkie-talkie or transceiver in your hand or in a Curios
+  slot sends your text over its frequency, with the same range and static as Simple Radio
+  (including cross-dimensional radio when Simple Radio's crossDimensional option is on).
+- Radio towers: typing near a switched-on microphone sends your text through its transmitters to
+  the receivers, radios and speakers on that frequency.
+- HUD icons above the Voice Chat microphone show when you can transmit and/or receive.
+- Optional support for Curios, VibrativeVoice and Beautified Chat Server.
+- /simpleproximitychat debug shows what the mod calculates.
+
+Not affiliated with Simple Voice Chat or Simple Radio.
+'''
+
+[[dependencies.simpleproximitychat]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.simpleproximitychat]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,1.20.2)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.simpleproximitychat]]
+modId = "voicechat"
+mandatory = true
+versionRange = "[1.20.1-2.4.0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.simpleproximitychat]]
+modId = "simpleradio"
+mandatory = false
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.simpleproximitychat]]
+modId = "curios"
+mandatory = false
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.simpleproximitychat]]
+modId = "vibrativevoice"
+mandatory = false
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.simpleproximitychat]]
+modId = "beautifiedchatserver"
+mandatory = false
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"

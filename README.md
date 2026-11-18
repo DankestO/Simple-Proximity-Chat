@@ -6,7 +6,7 @@ This mod changes the text chat. I always found it strange that there wasn't some
 
 *   Messages only reach players within Simple Voice Chat's voice distance.
 *   Up to 75% of that distance, messages arrive intact. Beyond that, words start dropping out (`see you ____ the ____`) until the message is lost completely.
-*   The chat event is never cancelled. The mod only decides which players each message is delivered to, so the server console and other mods that read chat still receive every message. This includes Minecraft Comes Alive villager conversations and Simple Radio's `frequency` command.
+*   The chat event is never cancelled. The mod only decides which players each message is delivered to, so the server console and other mods that read chat still receive every message. This is to avoid possible problems with other mods reading the chat.
 
 ## Radio support (Simple Radio)
 
